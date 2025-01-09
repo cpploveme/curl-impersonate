@@ -216,6 +216,7 @@ $(nghttp2_static_libs): $(NGHTTP2_VERSION).tar.bz2
 	  config_flags="--prefix=$(nghttp2_install_dir)"; \
 	  config_flags="$$config_flags --with-pic --enable-lib-only"; \
 	  config_flags="$$config_flags --disable-shared --disable-python-bindings"; \
+	  config_flags="$$config_flags --enable-ech"; \
 	  if test -n "$(host_alias)"; then \
 	    config_flags="$$config_flags --host=$(host_alias)"; \
 	  fi; \
